@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Typescript Chrome Extension Starter",
+  "version": "0.0.1",
+  "permissions": ["scripting", "activeTab", "storage", "declarativeNetRequest", "tabs"],
+  "background": {
+    "service_worker": "dist/worker.bundle.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["dist/content.bundle.js"]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}
