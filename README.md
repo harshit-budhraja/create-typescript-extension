@@ -4,6 +4,34 @@
 
 A robust, modern starter template for building Chrome extensions using TypeScript, Webpack, and best practices for browser extension development.
 
+## 🛠 Installation
+
+To create a new project, run the following command:
+
+```bash
+npx create-typescript-extension <project-name>
+```
+
+or to create a project in the current directory, run the following command:
+
+```bash
+npx create-typescript-extension .
+```
+
+## 📋 Installation to the system
+
+To install the CLI to the system, run the following command:
+
+```bash
+npm install -g create-typescript-extension
+```
+
+and then you can use the CLI to create a new project by running the following command:
+
+```bash
+create-typescript-extension <project-name>
+```
+
 ## ✨ Features
 
 - 🔧 TypeScript support
@@ -18,20 +46,6 @@ A robust, modern starter template for building Chrome extensions using TypeScrip
 - Node.js (v18+ recommended)
 - npm or yarn
 - Chrome Browser (or any other Chromium based browser)
-
-## 🛠 Installation
-
-1. Clone the repository or directly use the template:
-
-```bash
-git clone https://github.com/harshitbudhraja/typescript-chrome-extension-starter.git
-cd typescript-chrome-extension-starter
-```
-
-2. Install dependencies:
-```bash
-yarn install
-```
 
 ## 🖥 Development
 
