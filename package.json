@@ -1,22 +1,39 @@
 {
-  "name": "typescript-chrome-extension-starter",
-  "version": "0.0.1",
-  "description": "A starter project for building Chrome extensions with TypeScript",
-  "author": "Harshit Budhraja",
-  "devDependencies": {
-    "@types/chrome": "^0.0.270",
-    "@types/events": "^3.0.3",
-    "@types/lodash": "^4.17.7",
-    "lodash": "^4.17.21",
-    "ts-loader": "^9.5.1",
-    "typescript": "^5.5.4",
-    "webpack": "^5.94.0",
-    "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^5.0.4"
+  "name": "create-typescript-extension",
+  "version": "1.0.0",
+  "description": "CLI to scaffold a TypeScript browser extension project",
+  "main": "./dist/index.js",
+  "bin": {
+    "create-typescript-extension": "./dist/index.js"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=14.0.0"
   },
   "scripts": {
-    "dev": "webpack --config webpack.config.js --watch",
-    "build": "webpack --config webpack.config.js",
-    "start": "webpack serve --config webpack.config.js"
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "dev": "tsc -w"
+  },
+  "keywords": [
+    "typescript",
+    "extension",
+    "browser-extension",
+    "cli",
+    "scaffold"
+  ],
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^11.1.0",
+    "execa": "^9.5.2",
+    "fs-extra": "^11.2.0",
+    "inquirer": "^9.2.12",
+    "ora": "^8.1.1"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/inquirer": "^9.0.7",
+    "@types/node": "^20.11.5",
+    "typescript": "^5.3.3"
   }
 }
