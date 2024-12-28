@@ -23,4 +23,10 @@ module.exports = {
   },
   mode: 'development',
   devtool: 'cheap-module-source-map',
+  optimization: {
+    // Prevent runtime chunk generation
+    runtimeChunk: false,
+    // Disable code splitting
+    splitChunks: false
+  }
 };
